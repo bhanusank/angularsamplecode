@@ -1,0 +1,46 @@
+label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+
+#my-div {
+  position: fixed;
+  width: 20%; /* Set your desired with */
+  z-index: 2; /* Make sure its above other items. */
+  top: 50%;
+  left: 50%;
+  margin-top: -20%; /* Changes with height. */
+  margin-left: -10%; /* Your width divided by 2. */
+
+  /* You will not need the below, its only for styling   purposes. */
+  padding: 10px;
+  
+  text-align: center;
+}
+

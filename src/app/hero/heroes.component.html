@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div id="my-div">
+  <div>
+    <h2>My Heroes</h2>
+  <label>Hero name:</label> <input #heroName />
+  <button (click)="add(heroName.value); heroName.value=''">
+    Add
+  </button>
+  <button (click)="goBack()">Back</button>
+</div>
+
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th colspan="2">Actions</th>
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let hero of heroes">
+            <td>{{ hero.id }}</td>
+            <td>{{ hero.name }}</td>
+            <td><a [routerLink]="['/edit', hero._id]" (click)="onSelect(hero)" class="btn btn-primary">Edit</a></td>
+            <td><button (click)="delete(hero)"  class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+</div>
+<app-header [show]=!showmenu></app-header>
